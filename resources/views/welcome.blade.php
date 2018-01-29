@@ -1,95 +1,54 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Laravel</title>
+    <title>Login</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+</head>
+<body class="bg-grey-lighter text-base text-grey-darkest font-normal relative">
+    <div class="h-2 bg-primary"></div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <div class="container mx-auto p-8">
+        <div class="mx-auto max-w-sm">
+            <div class="py-10 text-center">
+                @include('logo', ['style' => 'max-width: 12rem;'])
+            </div>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            <div class="bg-white rounded shadow">
+                <div class="border-b py-8 font-bold text-black text-center text-xl tracking-widest uppercase">
+                    Welcome back!
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <form class="bg-grey-lightest px-10 py-10">
+                    {{ csrf_field() }}
+
+                    <div class="mb-3">
+                        <input class="border w-full p-3" name="email" type="text" placeholder="E-Mail">
+                    </div>
+                    <div class="mb-6">
+                        <input class="border w-full p-3" name="password" type="password" placeholder="**************">
+                    </div>
+                    <div class="flex">
+                        <button class="bg-primary hover:bg-primary-dark w-full p-4 text-sm text-white uppercase font-bold tracking-wider">
+                            Login
+                        </button>
+                    </div>
+                </form>
+
+                <div class="border-t px-10 py-6">
+                    <div class="flex justify-between">
+                        <a href="#" class="font-bold text-primary hover:text-primary-dark no-underline">Don't have an account?</a>
+                        <a href="#" class="text-grey-darkest hover:text-black no-underline">Forgot Password?</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
