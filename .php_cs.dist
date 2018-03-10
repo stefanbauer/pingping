@@ -13,11 +13,10 @@ return Config::create()
     ->setRiskyAllowed(true)
     ->setRules([
         '@Symfony' => true,
-        'strict_param' => true,
         'array_syntax' => ['syntax' => 'short'],
-        'ordered_imports' => ['sortAlgorithm' => 'length'],
+        'ordered_imports' => true,
         'phpdoc_order' => true,
-        'phpdoc_annotation_without_dot' => false,
+        'self_accessor' => false,
     ])
     ->setFinder($finder)
 ;
