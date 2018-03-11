@@ -57,7 +57,9 @@ let colors = {
   'white': '#ffffff',
 
   'primary': '#2b79c1',
-  'primary-dark': '#266299'
+  'primary-dark': '#266299',
+
+  'red': '#bf6464',
 }
 
 module.exports = {

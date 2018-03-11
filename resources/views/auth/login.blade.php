@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+@extends('layouts.skeleton')
 
-    <title>Login</title>
+@section('pageTitle', 'PingPing - Login')
+@section('bodyClasses', 'bg-grey-lighter text-base text-grey-darkest font-normal relative')
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-</head>
-<body class="bg-grey-lighter text-base text-grey-darkest font-normal relative">
+@section('body')
     <div class="h-2 bg-primary"></div>
-
     <div class="container mx-auto p-8">
         <div class="mx-auto max-w-sm">
             <div class="py-10 text-center">
@@ -25,17 +16,23 @@
                     Welcome back!
                 </div>
 
-                <form class="bg-grey-lightest px-10 py-10">
+                <form action="/login" method="post" class="bg-grey-lightest px-10 py-10">
                     {{ csrf_field() }}
 
                     <div class="mb-3">
-                        <input class="border w-full p-3" name="email" type="text" placeholder="E-Mail">
+                        <input class="border {{ $errors->first('email') ? 'border-red' : '' }} w-full p-3" name="email" type="text" placeholder="E-Mail">
+                        @if ($errors->first('email'))
+                            <p class="text-red text-sm mt-1">{{ $errors->first('email') }}</p>
+                        @endif
                     </div>
                     <div class="mb-6">
-                        <input class="border w-full p-3" name="password" type="password" placeholder="**************">
+                        <input class="border {{ $errors->first('password') ? 'border-red' : '' }} w-full p-3" name="password" type="password" placeholder="**************">
+                        @if ($errors->first('password'))
+                            <p class="text-red text-sm mt-1">{{ $errors->first('password') }}</p>
+                        @endif
                     </div>
                     <div class="flex">
-                        <button class="bg-primary hover:bg-primary-dark w-full p-4 text-sm text-white uppercase font-bold tracking-wider">
+                        <button type="submit" class="bg-primary hover:bg-primary-dark w-full p-4 text-sm text-white uppercase font-bold tracking-wider">
                             Login
                         </button>
                     </div>
@@ -50,5 +47,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+@stop
