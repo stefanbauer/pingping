@@ -16,7 +16,7 @@
         "less": "^2.7.3",
         "less-loader": "^4.0.5",
         "lodash": "^4.17.4",
-        "tailwindcss": "^0.4",
+        "tailwindcss": "^0.5",
         "vue": "^2.5.7"
     }
 }
