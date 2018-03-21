@@ -23,5 +23,7 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/services', 'ServicesController@index')->name('services');
+    Route::get('/settings/profile', 'ProfileController@edit')->name('settings.profile.edit');
+    Route::get('/billing', 'CreditsController@index')->name('billing.credits');
 });
 

@@ -56,10 +56,29 @@ let colors = {
   'grey-lightest': '#fcfcfc',
   'white': '#ffffff',
 
-  'primary': '#2b79c1',
-  'primary-dark': '#266299',
+  'primary-light': '#93c7fe',
+  'primary': '#4598db',
+  'primary-dark': '#006cb8',
 
-  'red': '#bf6464',
+  'secondary-light': '#d2d5da',
+  'secondary': '#96a5b8',
+  'secondary-dark': '#5a7897',
+
+  'info-light': '#a9f8ff',
+  'info': '#4cc8f9',
+  'info-dark': '#009acc',
+
+  'warning-light': '#fffa9a',
+  'warning': '#ecc657',
+  'warning-dark': '#b99600',
+
+  'success-light': '#a2ffa9',
+  'success': '#5ed66e',
+  'success-dark': '#00a633',
+
+  'danger-light': '#ff8795',
+  'danger': '#ed4763',
+  'danger-dark': '#bf0036'
 }
 
 module.exports = {
@@ -294,6 +313,24 @@ module.exports = {
 
   backgroundColors: colors,
 
+  /*
+  |-----------------------------------------------------------------------------
+  | Background sizes               https://tailwindcss.com/docs/background-size
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you define your background sizes. We provide some common
+  | values that are useful in most projects, but feel free to add other sizes
+  | that are specific to your project here as well.
+  |
+  | Class name: .bg-{size}
+  |
+  */
+
+  backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+  },
 
   /*
   |-----------------------------------------------------------------------------
@@ -517,6 +554,7 @@ module.exports = {
     '4xl': '90rem',
     '5xl': '100rem',
     'full': '100%',
+    'screen': '1400px',
   },
 
 
@@ -593,6 +631,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10': '2.5rem',
   },
 
 
@@ -740,7 +779,12 @@ module.exports = {
   | Here is where you control which modules are generated and what variants are
   | generated for each of those modules.
   |
-  | Currently supported variants: 'responsive', 'hover', 'focus'
+  | Currently supported variants:
+  |   - responsive
+  |   - hover
+  |   - focus
+  |   - active
+  |   - group-hover
   |
   | To disable a module completely, use `false` instead of an array.
   |
@@ -749,7 +793,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover'],
+    backgroundColors: ['responsive', 'hover', 'group-hover'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
@@ -782,7 +826,7 @@ module.exports = {
     svgFill: [],
     svgStroke: [],
     textAlign: ['responsive'],
-    textColors: ['responsive', 'hover'],
+    textColors: ['responsive', 'hover', 'group-hover'],
     textSizes: ['responsive'],
     textStyle: ['responsive', 'hover'],
     tracking: ['responsive'],
@@ -794,6 +838,26 @@ module.exports = {
     zIndex: ['responsive'],
   },
 
+  /*
+  |-----------------------------------------------------------------------------
+  | Plugins                                https://tailwindcss.com/docs/plugins
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you can register any plugins you'd like to use in your
+  | project. Tailwind's built-in `container` plugin is enabled by default to
+  | give you a Bootstrap-style responsive container component out of the box.
+  |
+  | Be sure to view the complete plugin documentation to learn more about how
+  | the plugin system works.
+  |
+  */
+
+  plugins: [
+    // require('tailwindcss/plugins/container')({
+    //     center: true,
+    //     padding: '1rem',
+    // }),
+  ],
 
   /*
   |-----------------------------------------------------------------------------
