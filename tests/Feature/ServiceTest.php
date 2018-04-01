@@ -21,7 +21,7 @@ class ServiceTest extends FeatureTestCase
     public function an_authenticated_user_can_see_services()
     {
         $this->withoutExceptionHandling();
-        
+
         $this->login($user = factory(User::class)->create());
         $service = factory(Service::class)->create([
             'user_id' => $user->id,
