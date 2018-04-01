@@ -6,9 +6,14 @@ php:
 
 before_script:
   - cp .env.travis .env
+  - mysql -e 'create database pingping_test;'
+  - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
 
 cache:
   directories:
     - vendor
+
+script:
+  - vendor/bin/phpunit
