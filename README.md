@@ -13,3 +13,5 @@ To be done...
 ## License
 
 See the [LICENSE](LICENSE.md) for details.
+
+Please refer also to that [LICENSE](LICENSE.md) if you are interested in my legal texts. All legal texts contained in this repository are of my own property, which I paid for. No parts can be reused or transmitted in any form or by any means whatsoever. If you are interested in them for your own product, get in touch or use the appropriate services.

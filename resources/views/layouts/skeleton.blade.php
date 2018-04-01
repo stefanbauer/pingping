@@ -10,8 +10,14 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+
+    @if (config('pingping.google_analytics.tracking_id'))
+        @include('tracking.google_analytics')
+    @endif
 </head>
 <body class="@yield('bodyClasses')">
     @yield('body')
+
+    @stack('scripts')
 </body>
 </html>

@@ -18,5 +18,8 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 - **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 - **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
+### Particularities related to my legal texts
 
+This is the production ready, public repository for the PingPing SaaS application, hereby all of the legal content is publicly visible. All legal texts contained in this repository are of my own property, which I paid for. No parts can be reused or transmitted in any form or by any means whatsoever.
 
+**Please don't steal it and use it just somewhere else!** If you are interested in them for your own product, get in touch or use the appropriate services.

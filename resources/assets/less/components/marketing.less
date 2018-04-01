@@ -1,0 +1,47 @@
+.legal {
+    h1, h2, h3, h4 {
+        @apply .text-black;
+        @apply .mb-2;
+        @apply .font-bold;
+    }
+
+    h1 {
+        @apply .text-3xl;
+        @apply .mb-10;
+        @apply .leading-none;
+    }
+
+    h2 {
+        @apply .mt-10;
+        @apply .text-xl;
+    }
+
+    h3 {
+        @apply .text-lg;
+    }
+
+    h4 {
+        @apply .text-base;
+    }
+
+    p {
+        @apply .mb-4;
+
+        &:last-child {
+            @apply .mb-0;
+        }
+    }
+
+    br {
+        line-height: 40px;
+    }
+
+    a {
+        @apply .no-underline;
+        @apply .text-primary;
+
+        &:hover {
+            @apply .text-primary-dark;
+        }
+    }
+}

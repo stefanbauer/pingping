@@ -1,14 +1,16 @@
 @extends('layouts.skeleton')
 
 @section('pageTitle', 'PingPing - Login')
-@section('bodyClasses', 'bg-grey-lighter text-base text-grey-darkest font-normal relative')
+@section('bodyClasses', 'bg-primary-lightest text-base text-grey-darkest font-normal relative')
 
 @section('body')
     <div class="h-2 bg-primary"></div>
     <div class="container p-8">
         <div class="mx-auto max-w-sm">
             <div class="py-10 text-center">
-                @include('logo', ['style' => 'max-width: 12rem;'])
+                <a href="{{ route('homepage') }}">
+                    @include('logo', ['style' => 'max-width: 12rem;'])
+                </a>
             </div>
 
             <div class="bg-white rounded shadow">
