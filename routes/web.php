@@ -2,6 +2,33 @@
 
 /*
 |--------------------------------------------------------------------------
+| Marketing
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/', function () {
+    return view('marketing.index');
+})->name('homepage');
+
+Route::get('/subscription-confirmed', function () {
+    return view('marketing.subscription-confirmed');
+});
+
+Route::get('/terms-and-conditions', function () {
+    return view('marketing.terms-and-conditions');
+})->name('terms-and-conditions');
+
+Route::get('/privacy-policy', function () {
+    return view('marketing.privacy-policy');
+})->name('privacy-policy');
+
+Route::get('/imprint', function () {
+    return view('marketing.imprint');
+})->name('imprint');
+
+/*
+|--------------------------------------------------------------------------
 | Authentication
 |--------------------------------------------------------------------------
 |

@@ -1,7 +1,7 @@
 @extends('layouts.skeleton')
 
 @section('pageTitle', 'PingPing')
-@section('bodyClasses', 'bg-grey-lighter text-base text-grey-darkest font-normal relative')
+@section('bodyClasses', 'bg-primary-lightest text-base text-grey-darkest font-normal relative')
 
 @section('body')
     <div class="min-h-screen flex flex-col">
@@ -23,5 +23,4 @@
 
         @include('layouts.application.partials.footer')
     </div>
-    {{--<flash message="{{ session('flash') }}" type="success"></flash>--}}
 @stop
